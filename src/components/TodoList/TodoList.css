@@ -9,7 +9,10 @@
 
 .add-task-form {
   display: flex;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-task-form input {
@@ -27,6 +30,11 @@
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.todo-list-container h2 {
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 .todo-list-container ul {

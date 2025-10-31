@@ -123,7 +123,7 @@ const TodoList = () => {
     return (
         <div className="todo-list-container">
             <h2>Lista de Tareas</h2>
-            <form onSubmit={handleAddTask} style={{display: 'flex', gap: 8, marginBottom: 12}}>
+            <form onSubmit={handleAddTask} className="add-task-form">
                 <input
                     type="text"
                     value={inputValue}
@@ -160,10 +160,10 @@ const TodoList = () => {
             </ul>
             {/* Completed and deleted lists shown below the tasks */}
             <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 18}}>
+                    <CompletedList />
+                    <DeletedList />
               
             </div>
-            <CompletedList />
-            <DeletedList />
         </div>
     );
 };
