@@ -1,0 +1,59 @@
+.app-header {
+  background-color: #282c34;
+  padding: 12px 20px;
+  color: white;
+}
+
+.app-logo {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* ... (estilos existentes) ... */
+
+.app-header {
+  /* layout en línea: logo a la izquierda, nav centrado, switcher a la derecha */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  /* permitir que el nav ocupe espacio y centrar su contenido */
+  flex: 1 1 auto;
+  justify-content: center;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Forzar que el theme switcher quede a la derecha */
+.theme-switcher-right {
+  margin-left: auto;
+}
+
+nav a { /* <Link> se renderiza como una <a>, así que podemos estilizarla */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.2s;
+}
+
+nav a:hover {
+  border-bottom-color: #61dafb; /* Color azul de React */
+}

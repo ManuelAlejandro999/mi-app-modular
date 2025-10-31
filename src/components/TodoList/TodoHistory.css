@@ -1,0 +1,29 @@
+.todo-history {
+  margin-top: 18px;
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+.todo-history h3 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+.todo-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.todo-history-table th,
+.todo-history-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 0.95rem;
+}
+.todo-history-table thead th {
+  font-weight: 600;
+  color: #111827;
+}
+
+.todo-history-empty {
+  color: #6b7280;
+}

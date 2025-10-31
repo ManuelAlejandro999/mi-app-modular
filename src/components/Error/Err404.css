@@ -1,0 +1,38 @@
+.err404-root {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 16px;
+  background: #fff;
+}
+
+.err404-card {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(35,55,90,0.06);
+  max-width: 920px;
+  width: 100%;
+}
+
+.err404-visual { flex: 0 0 260px; display:flex; align-items:center; justify-content:center }
+.err404-content { flex: 1 }
+.err404-content h1 { margin: 0 0 8px; font-size: 28px; color: #102a43 }
+.err404-content p { margin: 0 0 18px; color: #334e68 }
+
+.err404-actions { display:flex; gap:12px }
+.btn { display:inline-block; padding:10px 14px; border-radius:8px; text-decoration:none; color:#0b1f3a; border:1px solid transparent; background: #f1f5f9 }
+.btn.primary { background: linear-gradient(90deg,#3b82f6,#60a5fa); color:white }
+
+.err404-note { margin-top:16px; color:#6b7280; font-size:13px }
+
+@media (max-width:720px) {
+  .err404-card { flex-direction:column; text-align:center }
+  .err404-visual { flex-basis: auto }
+  .err404-actions { justify-content:center }
+}
