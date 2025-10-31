@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import './TodoHistory.css';
+import ThemeContext from '../../context/ThemeContext';
 
 const DeletedList = () => {
   const [deleted, setDeleted] = useState([]);
@@ -22,11 +23,13 @@ const DeletedList = () => {
     return () => unsub();
   }, []);
 
-  if (loading) return <div className="todo-history">Cargando eliminadas...</div>;
-  if (!deleted.length) return <div className="todo-history">No hay tareas eliminadas.</div>;
+  const { theme } = useContext(ThemeContext);
+
+  if (loading) return <div className={`todo-history ${theme}`}>Cargando eliminadas...</div>;
+  if (!deleted.length) return <div className={`todo-history ${theme}`}>No hay tareas eliminadas.</div>;
 
   return (
-    <div className="todo-history">
+    <div className={`todo-history ${theme}`}>
       <h3>Tareas eliminadas</h3>
       <table className="todo-history-table">
         <thead>

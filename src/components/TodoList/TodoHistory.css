@@ -3,6 +3,7 @@
   padding: 12px;
   border-top: 1px solid #e5e7eb;
   background: #fafafa;
+  color: #111827;
 }
 .todo-history h3 {
   margin: 0 0 8px 0;
@@ -22,6 +23,20 @@
 .todo-history-table thead th {
   font-weight: 600;
   color: #111827;
+}
+
+/* Dark mode styles */
+.todo-history.dark {
+  background: #0f1720; /* dark background */
+  border-top-color: #1f2937;
+  color: #e5e7eb;
+}
+.todo-history.dark .todo-history-table th,
+.todo-history.dark .todo-history-table td {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.todo-history.dark .todo-history-table thead th {
+  color: #f3f4f6;
 }
 
 .todo-history-empty {

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { db } from '../../firebaseConfig';
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import './TodoHistory.css';
+import ThemeContext from '../../context/ThemeContext';
 
 const CompletedList = () => {
   const [completed, setCompleted] = useState([]);
@@ -22,11 +23,13 @@ const CompletedList = () => {
     return () => unsub();
   }, []);
 
-  if (loading) return <div className="todo-history">Cargando completadas...</div>;
-  if (!completed.length) return <div className="todo-history">No hay tareas completadas.</div>;
+  const { theme } = useContext(ThemeContext);
+
+  if (loading) return <div className={`todo-history ${theme}`}>Cargando completadas...</div>;
+  if (!completed.length) return <div className={`todo-history ${theme}`}>No hay tareas completadas.</div>;
 
   return (
-    <div className="todo-history">
+    <div className={`todo-history ${theme}`}>
       <h3>Tareas completadas</h3>
       <table className="todo-history-table">
         <thead>
