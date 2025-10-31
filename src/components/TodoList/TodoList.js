@@ -158,11 +158,10 @@ const TodoList = () => {
                     </li>
                 ))}
             </ul>
-            {/* Completed and deleted lists shown below the tasks */}
-            <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginTop: 18}}>
-                    <CompletedList />
-                    <DeletedList />
-              
+            {/* Completed and deleted lists shown below the tasks (stacked) */}
+            <div style={{display: 'flex', flexDirection: 'column', gap: 16, marginTop: 18}}>
+                <CompletedList />
+                <DeletedList />
             </div>
         </div>
     );
